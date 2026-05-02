@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<article class="text">
+  <header class="text-header">
+    {% if page.epigraph %}
+      <blockquote class="epigraph">
+        <p>{{ page.epigraph }}</p>
+        {% if page.epigraph_source %}<cite>— {{ page.epigraph_source }}</cite>{% endif %}
+      </blockquote>
+    {% endif %}
+
+    <h1 class="text-title">{{ page.title }}</h1>
+
+    {% if page.subtitle %}
+      <p class="text-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+
+    <p class="text-date">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%d de %B, %Y" }}
+      </time>
+    </p>
+  </header>
+
+  <div class="text-body">
+    {{ content }}
+  </div>
+
+  <div class="text-end" aria-hidden="true">⁂</div>
+
+  <nav class="text-nav">
+    {% if page.previous %}
+      <a class="text-nav-prev" href="{{ page.previous.url | relative_url }}" rel="prev">
+        <span class="text-nav-label">Anterior</span>
+        <span class="text-nav-title">{{ page.previous.title }}</span>
+      </a>
+    {% endif %}
+    {% if page.next %}
+      <a class="text-nav-next" href="{{ page.next.url | relative_url }}" rel="next">
+        <span class="text-nav-label">Siguiente</span>
+        <span class="text-nav-title">{{ page.next.title }}</span>
+      </a>
+    {% endif %}
+  </nav>
+</article>

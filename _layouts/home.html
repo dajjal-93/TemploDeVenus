@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<section class="home">
+  {% if site.description and site.description != "" %}
+    <p class="home-description">{{ site.description }}</p>
+  {% endif %}
+
+  <div class="ornament" aria-hidden="true">·  ·  ·</div>
+
+  <ul class="text-list">
+    {% for post in site.posts %}
+      <li class="text-list-item">
+        <a href="{{ post.url | relative_url }}">
+          <span class="text-list-title">{{ post.title }}</span>
+          {% if post.subtitle %}<span class="text-list-subtitle">{{ post.subtitle }}</span>{% endif %}
+          <span class="text-list-date">
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%d · %m · %Y" }}
+            </time>
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {{ content }}
+</section>
