@@ -1,6 +1,6 @@
 ---
 title: Dhul Qaranayn
-date: 2026-05-02 12:00:00 -0600
+date: 2026-05-02 00:01:00 -0600
 ---
 
 Arcadia. En tiempos prehistóricos, antes de la lengua y antes de la religión existía una comunidad de mutuo entendimiento humano, cuya extensión suponía toda la superficie terrestre, con los animales de la tierra y bajo la tierra, en la vastedad del Sahara, y en las aguas profundas del Índico o del Pacífico, con las aves de los aires entre las montañas, sobre los valles y a donde ningún mamífero ha llegado, con el fuego y con las nubes. Esta comunidad era el hogar de una antigua criatura, a manera del primero entre los unos, o si se quiere, un rey justo.
