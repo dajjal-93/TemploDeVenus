@@ -3,6 +3,17 @@
   {% include header.html %}
 
   <main class="site-main">
+    {% if page.layout == 'home' %}
+    <div class="thelema-star" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 3.5rem;">
+      <img src="{{ '/assets/imagenes/unicursal_hexagram.png' | relative_url }}" alt="Unicursal Hexagram" style="width: 180px; height: auto; margin-bottom: 1.5rem;">
+      <p style="font-family: var(--serif-display); font-style: italic; color: var(--ink-soft); font-size: 1.1rem; margin: 0;">
+        "I await you in the City of the Pyramids."
+      </p>
+      <p style="font-family: var(--serif-display); color: var(--ink-faint); font-size: 0.9rem; letter-spacing: 0.2em; margin-top: 0.5rem;">
+        93 93/93
+      </p>
+    </div>
+    {% endif %}
     {{ content }}
   </main>
 
